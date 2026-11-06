@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import Login from './pages/Login'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,8 +12,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <h1>Dynamic Blog Application</h1>
-      <p>Welcome to our blog!</p>
+      <Routes>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
     </div>
   )
 }
