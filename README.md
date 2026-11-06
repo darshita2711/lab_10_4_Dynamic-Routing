@@ -1,32 +1,65 @@
-# React + TypeScript + Vite
+# Dynamic Routing Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## About the Project
 
-Currently, two official plugins are available:
+This is a simple blog application built with React, TypeScript, and React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project demonstrates how to create dynamic routes, navigate between pages, and protect pages using authentication context.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Display a list of blog posts.
+- Navigate to individual blog posts using dynamic URLs.
+- Use React Router for page navigation.
+- Login and logout functionality using Context API.
+- Protect the Admin Dashboard from unauthenticated users.
+- Redirect users to the Login page when they try to access protected pages.
+- Display a 404 page for unknown routes.
+- Redirect the home page to the Blog page.
 
-## Expanding the Oxlint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- Context API
+- CSS
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Navigate into the project:
+
+```bash
+cd lab-4-dynamic-routing
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Learning Outcomes
+
+Through this project, I practiced:
+
+- Setting up BrowserRouter.
+- Creating routes with Route and Routes.
+- Navigating with Link.
+- Reading dynamic URL parameters using useParams.
+- Managing authentication state with Context API.
+- Creating protected routes using Navigate.
+- Handling unknown routes with a wildcard route.
