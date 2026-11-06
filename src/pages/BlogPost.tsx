@@ -1,6 +1,6 @@
 
-import { useParams } from "react-router-dom";
 import { posts } from "../data/posts";
+import { Link, useParams } from "react-router-dom";
 
 function BlogPost() {
   const { slug } = useParams();
@@ -12,9 +12,12 @@ function BlogPost() {
   }
 
   return (
-    <div>
+    <div className="page-container">
+    <div className="post-card">
       <h1>{post.title}</h1>
       <p>{post.content}</p>
+      <Link to="/blog">Back to Blog</Link>
+    </div>
     </div>
   );
 }

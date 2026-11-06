@@ -3,10 +3,10 @@ import { posts } from "../data/posts";
 
 function Blog() {
   return (
-    <div>
+    <div className="page-container">
       <h1>Blog Page</h1>
       {posts.map((post) => (
-        <div key={post.id}>
+        <div className="post-card" key={post.id}>
         <h2>
             <Link to={`/blog/${post.slug}`}>
               {post.title}

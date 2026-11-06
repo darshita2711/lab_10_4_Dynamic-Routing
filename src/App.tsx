@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes , Navigate} from 'react-router-dom'
 import Login from './pages/Login'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import ProtectedRoute from './components/ProtectedRoute'
 import Admin from './pages/Admin'
+import NotFound from './pages/NotFound'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+         <Route path="*" element={<Navigate to="/not-found" replace />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
@@ -27,6 +29,7 @@ function App() {
       </ProtectedRoute>
     }
   />
+       <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

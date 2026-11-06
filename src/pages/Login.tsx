@@ -12,7 +12,7 @@ function Login() {
   const { login, isAuthenticated } = context;
 
   return (
-    <div>
+    <div className="page-container">
       <h1>Login Page</h1>
 
       {isAuthenticated ? (
