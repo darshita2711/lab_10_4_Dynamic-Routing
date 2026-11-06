@@ -29,7 +29,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffb4a2;
+  color: #d8765d;
 }
 
 nav button {
@@ -64,10 +64,10 @@ button:hover {
 }
 
 .post-card h2 a {
-  color: #29264b;
+  color: #3e3974;
   text-decoration: none;
 }
 
 .post-card h2 a:hover {
-  color: #e76f51;
+  color: #2f24aa;
 }
